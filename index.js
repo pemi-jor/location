@@ -27,6 +27,12 @@ app.use("/world", (req, res) => {
 
 app.use("/locations", router);
 
+const port = process.env.PORT || 8080;
+const server = app.listen(port, () => {
+  console.log(`Listening on port ${server.address().port}`);
+});
+/*
 const server = app.listen(8080, () => {
   console.log(`Listening on port ${server.address().port}`);
 });
+*/
